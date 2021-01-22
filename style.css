@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  --purple: #673AB7;
+  --green: #00A878;
+  --pink: #E54F6D;
+
+  font-family: "Arial", sans-serif;
+}
+
+section {
+  /* para fazer as curvas */
+  position: relative;
+
+  /* minha personalização */
+  height: 80vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #ffffff;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2rem;
+
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+a {
+  color: #00000088;
+  text-shadow: none;
+  text-decoration: none;
+}
+
+a[href^="#"] {
+  position: absolute;
+  bottom: 4rem;
+  font-style: normal;
+  color: inherit;
+  text-shadow: inherit;
+}
+
+a[href^="#"] small {
+  font-size: 1rem;
+}
+
+#s1 {
+  background-image: url("balog.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+#s1 .wave {
+  fill: var(--purple);
+}
+
+#s2 {
+  background-color: var(--purple);
+}
+
+#s3 {
+  background-color: var(--green);
+}
+
+#s3 .wave {
+  fill: var(--purple);
+}
+
+#s4 {
+  background-color: var(--pink);
+}
+
+#s4 .wave path {
+  fill: var(--green);
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  overflow: hidden;
+}
+
+.wave svg {
+  width: 100%;
+  height: 55px;
+}
+
+.wave-bottom {
+  bottom: -3px;
+  transform: rotate(180deg);
+}
+
+.wave-top {
+  top: -3px;
+}
+
+@media screen and (min-width: 500px) {
+  section {
+    font-size: 3rem;
+  }
+}
